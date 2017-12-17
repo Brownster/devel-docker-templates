@@ -59,43 +59,7 @@ Port 	          Description
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Networking>
-    <Mode>bridge</Mode>
-    <Config 
-       Type="Port" 
-       Name="Web UI" 
-       Target="80" 
-       Default="8082" 
-       Mode="tcp" 
-       Description="WEB UI" 
-       Display="always" 
-       Required="False">8082</Config>
-    <Config 
-       Type="Port" 
-       Name="PJSIP" 
-       Target="5060" 
-       Default="5060" 
-       Mode="tcp" 
-       Description="PJSIP PORT" 
-       Display="always" 
-       Required="true">5060</Config>
-    <Config 
-       Type="Port" 
-       Name="SIP PORT" 
-       Target="5160" 
-       Default="5160" 
-       Mode="tcp" 
-       Description="SIP PORT" 
-       Display="always" 
-       Required="true">5160</Config>
-    <Config 
-       Type="Port" 
-       Name="RTP PORTS" 
-       Target="18000-20000" 
-       Default="18000-20000" 
-       Mode="udp" 
-       Description="FTP PORTS" 
-       Display="always" 
-       Required="true">18000-20000</Config>
+    <Mode>none</Mode>    
   </Networking>
   <Data>
     <Config 
@@ -207,6 +171,7 @@ Port 	          Description
   </Environment>
   <Version>05616fd2</Version>
   <WebUI>http://[IP]:[PORT:8082]</WebUI>
+  <ExtraParams>--network homenet --ip 192.168.1.200</ExtraParams>
   <Banner></Banner>
   <Icon>https://raw.githubusercontent.com/Brownster/docker-templates/master/brownster/images/freepbx.png</Icon>
 </Container>
