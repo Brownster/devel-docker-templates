@@ -60,12 +60,7 @@ Port 	          Description
   <Privileged>false</Privileged>
   <Networking>
     <Mode>bridge</Mode>
-       <Port>
-        <HostPort>8080</HostPort>
-        <ContainerPort>8080</ContainerPort>
-        <Protocol>tcp</Protocol>
-        </Port>
-       <Config 
+      <Config 
        Type="Port" 
        Name="Web UI" 
        Target="80" 
