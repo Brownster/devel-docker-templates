@@ -60,7 +60,7 @@ Port 	          Description
   <Privileged>false</Privileged>
   <Networking>
     <Mode>bridge</Mode>
-      <Config 
+    <Config 
        Type="Port" 
        Name="Web UI" 
        Target="80" 
@@ -69,7 +69,7 @@ Port 	          Description
        Description="WEB UI" 
        Display="always" 
        Required="False">8082</Config>
-      <Config 
+    <Config 
        Type="Port" 
        Name="PJSIP" 
        Target="5060" 
@@ -78,7 +78,7 @@ Port 	          Description
        Description="PJSIP PORT" 
        Display="always" 
        Required="true">5060</Config>
-      <Config 
+    <Config 
        Type="Port" 
        Name="SIP PORT" 
        Target="5160" 
@@ -87,7 +87,7 @@ Port 	          Description
        Description="SIP PORT" 
        Display="always" 
        Required="true">5160</Config>
-      <Config 
+    <Config 
        Type="Port" 
        Name="RTP PORTS" 
        Target="18000-20000" 
@@ -96,9 +96,9 @@ Port 	          Description
        Description="FTP PORTS" 
        Display="always" 
        Required="true">18000-20000</Config>
-    </Networking>
-    <Data>
-      <Config 
+  </Networking>
+  <Data>
+    <Config 
        Type="Path" 
        Name="certs" 
        Target="/certs" 
@@ -106,7 +106,7 @@ Port 	          Description
        Mode="rw" 
        Description="Drop your Certificates here for TLS w/PJSIP"
        Required="false">/mnt/user/appdata/PMS</Config>
-      <Config 
+    <Config 
        Type="Path" 
        Name="FreePBX web files" 
        Target="/www/freepbx" 
@@ -114,7 +114,7 @@ Port 	          Description
        Mode="rw" 
        Description="FreePBX web files"
        Required="true">/mnt/user/appdata/freepbx/www/freepbx</Config>
-      <Config 
+    <Config 
        Type="Path" 
        Name="Asterisk and FreePBX Log Files" 
        Target="/var/log/asterisk" 
@@ -122,7 +122,7 @@ Port 	          Description
        Mode="rw" 
        Description="Asterisk and FreePBX Log Files"
        Required="true">/mnt/user/appdata/freepbx/var/log/asterisk</Config>
-      <Config 
+    <Config 
        Type="Path" 
        Name="Config directory" 
        Target="/data" 
@@ -130,9 +130,9 @@ Port 	          Description
        Mode="rw" 
        Description="Data Persistence for Asterisk and Freepbx"
        Required="true">/mnt/user/appdata/freepbx/data</Config>
-    </Data>
-    <Environment>      
-      <Config 
+  </Data>
+  <Environment>      
+    <Config 
        Type="Variable" 
        Name="Allows you to use an internally provided MariaDB Server e.g. TRUE or FALSE" 
        Target="DB_EMBEDDED" 
@@ -141,7 +141,7 @@ Port 	          Description
        Mask="false" 
        Display="advanced" 
        Required="true">TRUE</Config>
-      <Config 
+    <Config 
        Type="Variable" 
        Name="Change if using external DB" 
        Target="DB_HOST" 
@@ -150,7 +150,7 @@ Port 	          Description
        Mask="false" 
        Display="advanced" 
        Required="true">Host</Config>
-      <Config 
+    <Config 
        Type="Variable" 
        Name="DB Port" 
        Target="DB_PORT" 
@@ -159,7 +159,7 @@ Port 	          Description
        Mask="false" 
        Display="advanced" 
        Required="true">3306</Config>
-      <Config 
+    <Config 
        Type="Variable" 
        Name="DB Name" 
        Target="DB_NAME" 
@@ -168,7 +168,7 @@ Port 	          Description
        Mask="false" 
        Display="advanced" 
        Required="true">asterisk</Config>
-      <Config 
+    <Config 
        Type="Variable" 
        Name="DB User" 
        Target="DB_USER" 
@@ -177,7 +177,7 @@ Port 	          Description
        Mask="false" 
        Display="advanced" 
        Required="true">asterisk</Config>
-      <Config 
+    <Config 
        Type="Variable" 
        Name="DB Username" 
        Target="DB_PASS" 
@@ -186,7 +186,7 @@ Port 	          Description
        Mask="false" 
        Display="advanced" 
        Required="true">asterisk</Config>
-      <Config 
+    <Config 
        Type="Variable" 
        Name="RTP end port" 
        Target="RTP_START" 
@@ -195,7 +195,7 @@ Port 	          Description
        Mask="false" 
        Display="advanced" 
        Required="true">18000</Config>
-      <Config 
+    <Config 
        Type="Variable" 
        Name="RTP end port" 
        Target="RTP_FINISH" 
@@ -204,7 +204,7 @@ Port 	          Description
        Mask="false" 
        Display="advanced" 
        Required="true">Username</Config>
-    </Environment>
+  </Environment>
   <Version>05616fd2</Version>
   <WebUI>http://[IP]:[PORT:8082]</WebUI>
   <Banner></Banner>
