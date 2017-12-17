@@ -68,7 +68,7 @@ Port 	          Description
        Mode="tcp" 
        Description="WEB UI" 
        Display="always" 
-       Required="true">8082</Config>
+       Required="False">8082</Config>
       <Config 
        Type="Port" 
        Name="PJSIP" 
