@@ -2,7 +2,9 @@
 <Container>
 <Category>Communication</Category>
   <Name>FreePBX 14</Name>
-  <Description>This will build a container for FreePBX - A Voice over IP Manager for Asterisk. Upon starting this image it will give you a turn-key PBX system for SIP calling.
+  <Description>
+    This is a Docker for FreePBX 14- A Voice over IP Manager for Asterisk. Upon starting this
+    image it will give you a turn-key PBX system for SIP calling.
 
     Latest release Version 14
     Compiles and Installs Asterisk 14
@@ -14,6 +16,42 @@
     Automatically Installs User Control Panel
 
 This Container uses tiredofit/debian:stretch as a base.
+    
+The container supports data persistence and during Dockerfile Build creates symbolic links for 
+/var/lib/asterisk, /var/spool/asterisk, /home/asterisk, and /etc/asterisk. 
+Upon startup configuration files are copied and generated to support portability.
+    
+The following directories are used for configuration and can be mapped for persistent storage.
+
+Directory 	        Description
+/certs 	            Drop your Certificates here for TLS w/PJSIP
+/www/freepbx 	      FreePBX web files
+/var/log/asterisk 	Asterisk and FreePBX Log Files
+/data 	            Data Persistence for Asterisk and Freepbx
+
+**Environment Variables
+Along with the Environment Variables from the Base image, below is the complete list of available 
+options that can be used to customize your installation.
+    
+Parameter 	    Description
+DB_EMBEDDED 	  Allows you to use an internally provided MariaDB Server e.g. TRUE or FALSE
+DB_HOST 	      Host or container name of MySQL Server e.g. freepbx-db
+DB_PORT 	      MySQL Port - Default 3306
+DB_NAME 	      MySQL Database name e.g. asterisk
+DB_USER 	      MySQL Username for above Database e.g. asterisk
+DB_PASS 	      MySQL Password for above Database e.g. password
+RTP_START 	    What port to start RTP Transmissions - Default 18000
+RTP_FINISH 	    What port to start RTP Transmissions - Default 20000
+
+**Networking
+The following ports are exposed.
+    
+Port 	          Description
+80 	            HTTP
+4569 	          IAX
+5060 	          PJSIP
+5160 	          SIP
+18000-2000/udp 	RTP Ports
   </Description>
   <Project>https://www.freepbx.org/</Project>
   <Registry>https://github.com/tiredofit/docker-freepbx</Registry>
