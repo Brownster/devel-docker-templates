@@ -9,7 +9,6 @@
   <Repository>tiredofit/freepbx</Repository>
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
- <Environment/>
   <Networking>
     <Mode>bridge</Mode>
     <Publish>
@@ -49,7 +48,7 @@
        Description="FTP PORTS" 
        Display="always" 
        Required="true">18000-20000</Config>
-     </publish>
+      </publish> 
     </Networking>
     <Data>
       <Config 
