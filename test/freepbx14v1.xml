@@ -60,7 +60,6 @@ Port 	          Description
   <Privileged>false</Privileged>
   <Networking>
     <Mode>bridge</Mode>
-    <Publish>
        <Config 
        Type="Port" 
        Name="Web UI" 
@@ -97,7 +96,6 @@ Port 	          Description
        Description="FTP PORTS" 
        Display="always" 
        Required="true">18000-20000</Config>
-      </publish> 
     </Networking>
     <Data>
       <Config 
