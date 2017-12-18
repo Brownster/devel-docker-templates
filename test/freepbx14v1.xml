@@ -53,26 +53,26 @@ Upon startup configuration files are copied and generated to support portability
       </Port>
   </Publish>
   </Networking>
-    <Data>
-    <Volume>
-      <HostDir>/mnt/cache/appdata/freepbx/certs</HostDir>
-      <ContainerDir>/certs</ContainerDir>
-      <Mode>rw</Mode>
-    </Volume>
+      <Data>
+      <Volume>
+        <HostDir>/mnt/cache/appdata/freepbx/certs</HostDir>
+        <ContainerDir>/certs</ContainerDir>
+        <Mode>rw</Mode>
+       </Volume>
     <Volume>
       <HostDir>/mnt/cache/appdata/freepbx/www/freepbx</HostDir>
       <ContainerDir>/www/freepbx</ContainerDir>
       <Mode>rw</Mode>
-    <Volume>
+     <Volume>
       <HostDir>/mnt/cache/appdata/freepbx/var/log/asterisk</HostDir>
       <ContainerDir>/var/log/asterisk</ContainerDir>
       <Mode>rw</Mode>
     <Volume>
       <HostDir>/mnt/cache/appdata/freepbx/data</HostDir>
       <ContainerDir>/data</ContainerDir>
-     <Mode>rw</Mode>
-  </Volume>
-  </Data>
+      <Mode>rw</Mode>
+    </Volume>
+    </Data>
   <Environment>      
     <Variable>
       <Name>DB_EMBEDDED</Name>
