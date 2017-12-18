@@ -88,78 +88,39 @@ Upon startup configuration files are copied and generated to support portability
        Required="true">/mnt/user/appdata/freepbx/data</Config>
   </Data>
   <Environment>      
-    <Config 
-       Type="Variable" 
-       Name="Allows you to use an internally provided MariaDB Server e.g. TRUE or FALSE" 
-       Target="DB_EMBEDDED" 
-       Default="TRUE" 
-       Description="Set to false to use external DB" 
-       Mask="false" 
-       Display="advanced" 
-       Required="true">TRUE</Config>
-    <Config 
-       Type="Variable" 
-       Name="Change if using external DB" 
-       Target="DB_HOST" 
-       Default="Host" 
-       Description="Host or container name of MySQL Server e.g. freepbx-db" 
-       Mask="false" 
-       Display="advanced" 
-       Required="true">Host</Config>
-    <Config 
-       Type="Variable" 
-       Name="DB Port" 
-       Target="DB_PORT" 
-       Default="3306" 
-       Description="MySQL Port - Default 3306" 
-       Mask="false" 
-       Display="advanced" 
-       Required="true">3306</Config>
-    <Config 
-       Type="Variable" 
-       Name="DB Name" 
-       Target="DB_NAME" 
-       Default="asterisk" 
-       Description="MySQL Database name e.g. asterisk" 
-       Mask="false" 
-       Display="advanced" 
-       Required="true">asterisk</Config>
-    <Config 
-       Type="Variable" 
-       Name="DB User" 
-       Target="DB_USER" 
-       Default="asterisk" 
-       Description="MySQL Username for above Database e.g. asterisk" 
-       Mask="false" 
-       Display="advanced" 
-       Required="true">asterisk</Config>
-    <Config 
-       Type="Variable" 
-       Name="DB Username" 
-       Target="DB_PASS" 
-       Default="asterisk" 
-       Description="MySQL Password for above Database e.g. password" 
-       Mask="false" 
-       Display="advanced" 
-       Required="true">asterisk</Config>
-    <Config 
-       Type="Variable" 
-       Name="RTP end port" 
-       Target="RTP_START" 
-       Default="18000" 
-       Description="What port to start RTP Transmissions - Default 18000" 
-       Mask="false" 
-       Display="advanced" 
-       Required="true">18000</Config>
-    <Config 
-       Type="Variable" 
-       Name="RTP end port" 
-       Target="RTP_FINISH" 
-       Default="20000" 
-       Description="What port to end RTP Transmissions - Default 20000" 
-       Mask="false" 
-       Display="advanced" 
-       Required="true">Username</Config>
+    <Variable>
+      <Name>DB_EMBEDDED</Name>
+      <Value>TRUE</Value>
+      <description>Allows you to use an internally provided MariaDB Server e.g. TRUE or FALSE</description>
+    </Variable>
+        <Variable>
+      <Name>DB_HOST</Name>
+      <Value>Host</Value>
+    </Variable>
+        <Variable>
+      <Name>DB_PORT</Name>
+      <Value>3306</Value>
+    </Variable>
+        <Variable>
+      <Name>DB_NAME</Name>
+      <Value>asterisk</Value>
+    </Variable>
+        <Variable>
+      <Name>DB_USER</Name>
+      <Value>asterisk</Value>
+    </Variable>
+        <Variable>
+      <Name>DB_PASS</Name>
+      <Value>password</Value>
+    </Variable>
+    <Variable>
+      <Name>RTP_START</Name>
+      <Value>18000</Value>
+    </Variable>
+    <Variable>
+      <Name>RTP_FINISH</Name>
+      <Value>20000</Value>
+    </Variable>
   </Environment>
   <Version>05616fd2</Version>
   <WebUI>http://[IP]:[PORT:8082]</WebUI>
