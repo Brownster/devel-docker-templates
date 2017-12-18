@@ -46,46 +46,32 @@ Upon startup configuration files are copied and generated to support portability
         <ContainerPort>18000-20000</ContainerPort>
         <Protocol>udp</Protocol>
       </Port>
-       <Port>
+      <Port>
         <HostPort>4659</HostPort>
         <ContainerPort>4659</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>
-</Publish>
+  </Publish>
   </Networking>
-  <Data>
-    <Config 
-       Type="Path" 
-       Name="certs" 
-       Target="/certs" 
-       Default="/mnt/user/appdata/freepbx/certs" 
-       Mode="rw" 
-       Description="Drop your Certificates here for TLS w/PJSIP"
-       Required="false">/mnt/user/appdata/PMS</Config>
-    <Config 
-       Type="Path" 
-       Name="FreePBX web files" 
-       Target="/www/freepbx" 
-       Default="/mnt/user/appdata/freepbx/www/freepbx" 
-       Mode="rw" 
-       Description="FreePBX web files"
-       Required="true">/mnt/user/appdata/freepbx/www/freepbx</Config>
-    <Config 
-       Type="Path" 
-       Name="Asterisk and FreePBX Log Files" 
-       Target="/var/log/asterisk" 
-       Default="/mnt/user/appdata/freepbx/var/log/asterisk" 
-       Mode="rw" 
-       Description="Asterisk and FreePBX Log Files"
-       Required="true">/mnt/user/appdata/freepbx/var/log/asterisk</Config>
-    <Config 
-       Type="Path" 
-       Name="Config directory" 
-       Target="/data" 
-       Default="/mnt/user/appdata/freepbx/data" 
-       Mode="rw" 
-       Description="Data Persistence for Asterisk and Freepbx"
-       Required="true">/mnt/user/appdata/freepbx/data</Config>
+    <Data>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/freepbx/certs</HostDir>
+      <ContainerDir>/certs</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/freepbx/www/freepbx</HostDir>
+      <ContainerDir>/www/freepbx</ContainerDir>
+      <Mode>rw</Mode>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/freepbx/var/log/asterisk</HostDir>
+      <ContainerDir>/var/log/asterisk</ContainerDir>
+      <Mode>rw</Mode>
+    <Volume>
+      <HostDir>/mnt/cache/appdata/freepbx/data</HostDir>
+      <ContainerDir>/data</ContainerDir>
+     <Mode>rw</Mode>
+  </Volume>
   </Data>
   <Environment>      
     <Variable>
