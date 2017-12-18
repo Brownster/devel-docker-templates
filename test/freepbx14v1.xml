@@ -24,7 +24,34 @@ Upon startup configuration files are copied and generated to support portability
   <BindTime>true</BindTime>
   <Privileged>false</Privileged>
   <Networking>
-    <Mode>none</Mode>    
+    <Mode>none</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8080</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>5060</HostPort>
+        <ContainerPort>5060</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>5160</HostPort>
+        <ContainerPort>5160</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>18000-20000</HostPort>
+        <ContainerPort>18000-20000</ContainerPort>
+        <Protocol>udp</Protocol>
+      </Port>
+       <Port>
+        <HostPort>4659</HostPort>
+        <ContainerPort>4659</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+</Publish>
   </Networking>
   <Data>
     <Config 
