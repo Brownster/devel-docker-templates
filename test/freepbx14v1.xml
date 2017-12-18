@@ -63,6 +63,7 @@ Upon startup configuration files are copied and generated to support portability
       <HostDir>/mnt/cache/appdata/freepbx/www/freepbx</HostDir>
       <ContainerDir>/www/freepbx</ContainerDir>
       <Mode>rw</Mode>
+      </Volume>
      <Volume>
       <HostDir>/mnt/cache/appdata/freepbx/var/log/asterisk</HostDir>
       <ContainerDir>/var/log/asterisk</ContainerDir>
