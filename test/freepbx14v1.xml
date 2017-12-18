@@ -68,6 +68,7 @@ Upon startup configuration files are copied and generated to support portability
       <HostDir>/mnt/cache/appdata/freepbx/var/log/asterisk</HostDir>
       <ContainerDir>/var/log/asterisk</ContainerDir>
       <Mode>rw</Mode>
+      </Volume>
     <Volume>
       <HostDir>/mnt/cache/appdata/freepbx/data</HostDir>
       <ContainerDir>/data</ContainerDir>
@@ -80,23 +81,23 @@ Upon startup configuration files are copied and generated to support portability
       <Value>TRUE</Value>
       <description>Allows you to use an internally provided MariaDB Server e.g. TRUE or FALSE</description>
     </Variable>
-        <Variable>
+    <Variable>
       <Name>DB_HOST</Name>
       <Value>Host</Value>
     </Variable>
-        <Variable>
+    <Variable>
       <Name>DB_PORT</Name>
       <Value>3306</Value>
     </Variable>
-        <Variable>
+    <Variable>
       <Name>DB_NAME</Name>
       <Value>asterisk</Value>
     </Variable>
-        <Variable>
+    <Variable>
       <Name>DB_USER</Name>
       <Value>asterisk</Value>
     </Variable>
-        <Variable>
+    <Variable>
       <Name>DB_PASS</Name>
       <Value>password</Value>
     </Variable>
