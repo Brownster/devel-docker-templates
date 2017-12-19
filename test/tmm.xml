@@ -45,7 +45,7 @@
       <Mode>rw</Mode>
     </Volume>
   </Data>
-  <WebUI>http://[IP]:[PORT:8080]/#/client/c/tinyMediaManager</WebUI>
+  <WebUI>http://[IP]:[PORT:8085]/#/client/c/tinyMediaManager</WebUI>
   <Banner>http://i.imgur.com/w5HBV2W.png</Banner>
   <Icon>http://i.imgur.com/o9leX9c.png</Icon>
 </Container>
