@@ -39,6 +39,11 @@
       <ContainerDir>/mnt</ContainerDir>
       <Mode>rw</Mode>
     </Volume>
+     <Volume>
+      <HostDir>/mnt/usr/appdata/tinyMediaManager</HostDir>
+      <ContainerDir>/tinyMediaManager</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
   </Data>
   <WebUI>http://[IP]:[PORT:8080]/#/client/c/tinyMediaManager</WebUI>
   <Banner>http://i.imgur.com/w5HBV2W.png</Banner>
