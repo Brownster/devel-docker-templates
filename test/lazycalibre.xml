@@ -43,8 +43,8 @@
         <Protocol>tcp</Protocol>
       </Port>
       <Port>
-        <HostPort>80</HostPort>
-        <ContainerPort>8181</ContainerPort>
+        <HostPort>8181</HostPort>
+        <ContainerPort>80</ContainerPort>
         <Protocol>tcp</Protocol>
       </Port>      
     </Publish>
