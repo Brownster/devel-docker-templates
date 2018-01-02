@@ -78,7 +78,7 @@
   </Data>
   <Version></Version>
   <WebUI>http://[IP]:[PORT:5299]/</WebUI>
-  <Icon>https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/lazylibrarian-icon.png</Icon>
+  <Icon>https://raw.githubusercontent.com/Brownster/devel-docker-templates/master/test/images/lazylibrarian-icon.png</Icon>
   <ExtraParams></ExtraParams>
 
 <DonateText>Donations</DonateText>
